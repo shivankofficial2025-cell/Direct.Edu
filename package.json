@@ -1,0 +1,57 @@
+{
+  "name": "directedu",
+  "version": "1.0.0",
+  "description": "AI-Powered Educational Operating System",
+  "type": "module",
+  "main": "dist/backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run preview",
+    "migrate": "cd backend && npm run migrate",
+    "seed": "cd backend && npm run seed",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "test:integration": "npm run test:integration:backend",
+    "test:integration:backend": "cd backend && npm run test:integration",
+    "test:e2e": "cd frontend && npm run test:e2e",
+    "test:coverage": "npm run test:coverage:backend && npm run test:coverage:frontend",
+    "test:coverage:backend": "cd backend && npm run test:coverage",
+    "test:coverage:frontend": "cd frontend && npm run test:coverage",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "format": "npm run format:backend && npm run format:frontend",
+    "format:backend": "cd backend && npm run format",
+    "format:frontend": "cd frontend && npm run format",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "docker:logs": "docker-compose logs -f",
+    "docker:clean": "docker-compose down -v"
+  },
+  "keywords": [
+    "education",
+    "school",
+    "management",
+    "AI",
+    "learning",
+    "administration"
+  ],
+  "author": "DirectEdu Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
